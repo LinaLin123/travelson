@@ -1,0 +1,51 @@
+/* footer styles */
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #2d3039;
+  width: 100%;
+  min-height: 150px;
+
+  .company-logo-footer p{
+    font-family: "Unica One", cursive;;
+    font-size: 26px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: 0.74px;
+    text-align: center;
+    color: #ff8673;
+  }
+
+  .footer-navigation {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 30px;
+    background: #2d3039;
+
+
+    &__link-list {
+      padding: 2px;
+      list-style-type: none;
+      display: flex;
+      justify-content: space-between;
+      a {
+        text-decoration: none;
+        color: $color--footer-nav;
+        font-weight: bold;
+        padding: 0px 13px;
+        font-size: 14px;
+        @media (min-width: 700px) {
+          font-size: 16px;
+          padding: 0px 20px;
+        }
+      }
+    }
+  }
+}
+

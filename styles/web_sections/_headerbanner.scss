@@ -1,0 +1,52 @@
+/* top banner*/
+.picture-travel {
+    display: flex;
+    background-image: radial-gradient(
+        circle at 50% 0,
+        rgba(57, 73, 81, 0.5),
+        rgba(12, 32, 42, 0.5) 74%
+      ),
+      url("../images/header/header-small.jpg");
+      min-height: 470px;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      transition: all 1s linear;
+      transition-delay: 1s;
+      @media (min-width: 600px) {
+        align-items: center;
+        height: 782px;
+        background-image: radial-gradient(
+        circle at 50% 0,
+        rgba(57, 73, 81, 0.5),
+        rgba(12, 32, 42, 0.5) 74%
+      ),
+      url("../images/header/header-large.jpg");
+      transition: all 1s linear;
+      transition-delay: 1s;
+      }
+
+      &__text {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        color: $color--font2;
+        font-weight: bold;
+        letter-spacing: 1.92px;
+        text-align: center;
+        font-size: 16px;
+        &__title {
+        color:$color--heading1;
+          }
+        @media (min-width: 700px) {
+            justify-content:flex-start;
+            align-items: center;
+            max-width: 409px;
+            flex: 1 1 50%;
+            margin: 200px;
+            margin-bottom: 400px;
+
+    }
+}
+}

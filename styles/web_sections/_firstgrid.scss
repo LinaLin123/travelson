@@ -1,0 +1,108 @@
+/* section first grid styles */
+.img-grid1-wrapper {
+    position: relative;
+    height: 100%;
+    width: 100%;
+  }
+  .first-grid {
+    display:grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+    "row-1-left" 
+    "row-1-right";
+    background-color: $color--background;
+    padding:20px;
+      
+    }
+   
+  
+  .img-grid1 {
+      display:grid;
+      grid-area: row-1-right;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      grid-gap: 15px;
+      grid-template-areas: 
+      "a b"
+      "d d";
+      transition-duration: 1000ms;
+      transition-timing-function: linear;
+  }
+
+  .text-grid {
+    display:grid;
+    grid-area: row-1-left;
+    padding: 50px 0px 50px 0px;
+  }
+
+.text-grid {
+  align-self: center;
+  
+& h4 {
+  font-family: $font--main;
+  font-size: 18px;
+  font-weight: bold;;
+  letter-spacing: 0.17px;
+  color: $color--headign2;
+}
+& p {
+  font-family: $font--main;
+  font-size: 14px;
+  line-height: 1.57;
+  letter-spacing: 0.52px;
+  color: $color--font1;
+}
+  }
+
+.first-grid img {
+      object-fit: fit;
+      width: 100%;
+      height: 100%;
+  }
+  
+  .many-image1 {
+      grid-area: a;
+  }
+  
+  .many-image2 {
+      grid-area: b;
+  }
+  
+  .many-image3 {
+    grid-area: d;
+  }
+  
+  .many-image4 {
+      grid-area: c;
+      display: none;
+  }
+
+  @media screen and (min-width: 700px){
+    .first-grid {
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr;
+      grid-template-areas: 
+      "row-1-left row-1-right";
+      background-color: $color--background;
+      margin: 15px;
+      transition-duration: 500ms;
+      transition-timing-function: linear;
+      }
+    
+      .many-image4 {
+        grid-area: c;
+        display: initial;
+    }
+    
+    .img-grid1 {
+      display:grid;
+      grid-area: row-1-right;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      grid-gap: 15px;
+      grid-template-areas: 
+      "a b c"
+      "d d c";
+    }
+  }
+  
